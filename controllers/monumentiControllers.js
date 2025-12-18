@@ -35,12 +35,32 @@ function update(req, res){
 }
 
 //-----------modify
+function modify(req, res){
+    const id  = parseInt(req.params.id)
+    res.send("aggiorna parzialmente info del monumento n."+id)
+}
 
+//----------destroy
+function destroy(req, res){
+    const id = parseInt(req.params.id)
+    const monumentoIndex = monumentiSanCataldo.findIndex((monumento)=>monumento.id === id)
+
+    if(monumentoIndex===-1){
+        res.status(404)
+        return req.json({
+            message: "monumento non disponibile"
+        })
+    }
+monumentiSanCataldo.splice(monumentoIndex,1)
+    res.sendStatus(204)
+}
 const controller ={
     index,
     show,
     store,
     update,
+    modify,
+    destroy
 }
 
 export default controller
