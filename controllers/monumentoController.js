@@ -2,24 +2,36 @@ import { monumentiSanCataldo } from "../data.js";
 
 ///---------index
 function index(req, res) {
+
+//creo filtro con query string params
+const tag = req.query.tag;
+
+let filteredMonumenti = monumentiSanCataldo;
+if(tag!= undefined){
+    filteredMonumenti = monumentiSanCataldo.filter((monumento)=> 
+        monumento.tags.includes(tag))
+}
+
+
+
     const risposta = {
         info: {
-            total: monumentiSanCataldo.length,
+            total: filteredMonumenti.length,
         },
-        results: monumentiSanCataldo
+        results: filteredMonumenti
     }
        res.json(risposta)
 }
 
 //----------show
 function show(req, res){
-    const id = parseInt(req.param.id);
-    const momumento = monumentiSanCataldo.find(monumento = monumento.id ===id);
-    if(game ===undefined){
-        req.statut(404);
-        return req.json({message: "monumento non disponibile",})
+    const id = parseInt(req.params.id);
+    const monumento = monumentiSanCataldo.find(monumento => monumento.id ===id);
+    if(monumento ===undefined){
+        res.status(404);
+        return res.json({message: "monumento non disponibile"})
     }
-    req.json(game)
+    res.json(monumento)
 }
 
 //-----------store

@@ -1,5 +1,5 @@
 import express from "express";
-import monumentoController from "../controllers/monumentiControllers.js"
+import monumentoController from "../controllers/monumentoController.js"
 
 const router = express.Router();
 

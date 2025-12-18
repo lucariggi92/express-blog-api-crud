@@ -1,12 +1,14 @@
 
 const monumentiSanCataldo = [
   {
+    id: 1,
     titolo: "Chiesa Madre",
     descrizione: "Principale luogo di culto della città, dedicato a San Cataldo, patrono di San Cataldo. Rappresenta il centro religioso e storico del paese.",
     tags: ["chiesa", "religione", "patrono", "centro storico"],
     image: "/images/chiesa-madre.jpg"
   },
   {
+    id: 2,
     titolo: "Chiesa del Rosario",
     descrizione: "Santuario molto caro ai cittadini, legato a importanti tradizioni religiose e feste popolari.",
     tags: ["santuario", "religione", "tradizione", "fede"],
