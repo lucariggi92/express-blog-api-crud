@@ -15,24 +15,28 @@ const monumentiSanCataldo = [
     image: "/images/chiesa-del-rosario.jpg"
   },
   {
+     id: 3,
     titolo: "Torre civica dell'orologio",
     descrizione: "Torre storica del Comune di San Cataldo, scandisce da oltre 200 anni l'ora in città.",
     tags: ["torre", "orologio", "tempo", "architettura"],
     image: "/images/torre-orologio.jpg"
   },
   {
+     id: 4,
     titolo: "Teatro Marconi",
     descrizione: "Storico teatro cittadino, centro culturale per spettacoli, eventi e manifestazioni artistiche.",
     tags: ["teatro", "cultura", "arte", "spettacoli"],
     image: "/images/teatro-marconi.jpg"
   },
-  {
+  { 
+    id: 5,
     titolo: "Monumento ai Caduti",
     descrizione: "Monumento dedicato alla memoria dei cittadini sancataldesi caduti durante le guerre.",
     tags: ["monumento", "memoria", "storia", "guerra"],
     image: "/images/monumento-ai-caduti.jpg"
   },
   {
+    id: 6,
     titolo: "villa Baglio",
     descrizione: "Villa in stile liberty della famiglia Baglio.",
     tags: ["villa", "parco", "architettura", "liberty"],
